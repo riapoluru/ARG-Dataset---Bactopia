@@ -1,48 +1,51 @@
-Jul-18 21:10:51.397 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /home/riapoluru/miniforge3/envs/bactopia//share/bactopia-3.1.0/main.nf -w /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/ --r1 /mnt/c/Users/polur/Downloads/fastqs/SRR15144755_1.fastq.gz --r2 /mnt/c/Users/polur/Downloads/fastqs/SRR15144755_2.fastq.gz --sample SRR15144755 --outdir bactopia_outputs/SRR15144755 -profile docker
-Jul-18 21:10:51.575 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
-Jul-18 21:10:51.634 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/riapoluru/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
-Jul-18 21:10:51.687 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Jul-18 21:10:51.692 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Jul-18 21:10:51.698 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
-Jul-18 21:10:51.746 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Jul-18 21:10:51.794 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/nextflow.config
-Jul-18 21:10:51.804 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/nextflow.config
-Jul-18 21:10:51.863 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/riapoluru/.nextflow/secrets/store.json
-Jul-18 21:10:51.871 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@c4c0b41] - activable => nextflow.secret.LocalSecretsProvider@c4c0b41
-Jul-18 21:10:51.903 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
-Jul-18 21:10:55.938 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [bih, cfc_dev, uzl_omics, ifb_core, embl_hd, denbi_qbic, alice, mjolnir_globe, uppmax, giga, incliva, ilifu, ki_luria, uge, icr_alma, rosalind_uge, gcp, lugh, mccleary, unibe_ibu, vai, czbiohub_aws, jax, roslin, tes, arcc_hawk, scw, unc_longleaf, tigem, tubingen_apg, google, apollo, ipop_up, vsc_calcua, pdc_kth, googlels, ceci_nic5, ccga_cau, humantechnopole, stjude, daisybio, eddie, medair, biowulf, apptainer, bi, bigpurple, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, fred_hutch, seattlechildrens, icr_davros, ceres, munin, arm, rosalind, hasta, cfc, uzh, shu_bmrc, ebi_codon_slurm, ebc, ccga_dx, crick, ku_sund_danhead, marvin, biohpc_gen, mana, york_viking, unc_lccc, wehi, awsbatch, wustl_htcf, arcc, ceci_dragon2, imperial, maestro, software_license, standard, cannon, genotoul, nci_gadi, abims, eva_grace, janelia, nu_genomics, googlebatch, oist, sahmri, sge, kaust, alliance_canada, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, ebi_codon, cheaha, xanadu, nyu_hpc, test, marjorie, computerome, ucd_sonic, seg_globe, mssm, sanger, dkfz, bluebear, pasteur, einstein, ethz_euler, m3c, imb, ucl_cscluster, tuos_stanage, azurebatch, hki, seadragon, crukmi, csiro_petrichor, qmul_apocrita, docker, engaging, gis, hypatia, psmn, eva, unity, cropdiversityhpc, nygc, fgcz, crg, singularity, mpcdf_viper, pe2, self_hosted_runner, tufts, uw_hyak_pedslabs, binac2, genouest, cbe, unsw_katana, utd_juno, slurm, phoenix, seawulf, uod_hpc, fub_curta, uct_hpc, aws, aws_tower, binac, fsu_draco]
-Jul-18 21:10:56.069 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
-Jul-18 21:10:56.118 [main] DEBUG nextflow.cli.CmdRun - Launching `/home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/main.nf` [evil_faraday] DSL2 - revision: 0cd9f79ba7
-Jul-18 21:10:56.122 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Jul-18 21:10:56.123 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
-Jul-18 21:10:56.353 [main] DEBUG nextflow.Session - Session UUID: 4e5381d1-27d4-4989-bf4d-f59c78bd0ab6
-Jul-18 21:10:56.355 [main] DEBUG nextflow.Session - Run name: evil_faraday
-Jul-18 21:10:56.356 [main] DEBUG nextflow.Session - Executor pool size: 12
-Jul-18 21:10:56.375 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Jul-18 21:10:56.392 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=36; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
-Jul-18 21:10:56.423 [main] DEBUG nextflow.cli.CmdRun - 
+Jul-20 19:49:41.159 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /home/riapoluru/miniforge3/envs/bactopia//share/bactopia-3.1.0/main.nf -w /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/ --r1 /mnt/c/Users/polur/Downloads/Illumina_DNA_Reads/Illumina_DNA_Reads/28_S453_R1_001.fastq.gz --r2 /mnt/c/Users/polur/Downloads/Illumina_DNA_Reads/Illumina_DNA_Reads/28_S453_R2_001.fastq.gz --sample 28_S453_R1_001 --assembler spades --outdir 'my-sample-results/bactopia runs/28_S453_R1_001' -profile docker
+Jul-20 19:49:41.460 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Jul-20 19:49:41.502 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/riapoluru/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Jul-20 19:49:41.559 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-20 19:49:41.567 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-20 19:49:41.575 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jul-20 19:49:41.626 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul-20 19:49:41.670 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/nextflow.config
+Jul-20 19:49:41.679 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/nextflow.config
+Jul-20 19:49:41.738 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/riapoluru/.nextflow/secrets/store.json
+Jul-20 19:49:41.751 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@389562d6] - activable => nextflow.secret.LocalSecretsProvider@389562d6
+Jul-20 19:49:41.785 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Jul-20 19:49:45.562 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [bih, cfc_dev, uzl_omics, ifb_core, embl_hd, denbi_qbic, alice, mjolnir_globe, uppmax, giga, incliva, ilifu, ki_luria, uge, icr_alma, rosalind_uge, gcp, lugh, mccleary, unibe_ibu, vai, czbiohub_aws, jax, roslin, tes, arcc_hawk, scw, unc_longleaf, tigem, tubingen_apg, google, apollo, ipop_up, vsc_calcua, pdc_kth, googlels, ceci_nic5, ccga_cau, humantechnopole, stjude, daisybio, eddie, medair, biowulf, apptainer, bi, bigpurple, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, fred_hutch, seattlechildrens, icr_davros, ceres, munin, arm, rosalind, hasta, cfc, uzh, shu_bmrc, ebi_codon_slurm, ebc, ccga_dx, crick, ku_sund_danhead, marvin, biohpc_gen, mana, york_viking, unc_lccc, wehi, awsbatch, wustl_htcf, arcc, ceci_dragon2, imperial, maestro, software_license, standard, cannon, genotoul, nci_gadi, abims, eva_grace, janelia, nu_genomics, googlebatch, oist, sahmri, sge, kaust, alliance_canada, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, ebi_codon, cheaha, xanadu, nyu_hpc, test, marjorie, computerome, ucd_sonic, seg_globe, mssm, sanger, dkfz, bluebear, pasteur, einstein, ethz_euler, m3c, imb, ucl_cscluster, tuos_stanage, azurebatch, hki, seadragon, crukmi, csiro_petrichor, qmul_apocrita, docker, engaging, gis, hypatia, psmn, eva, unity, cropdiversityhpc, nygc, fgcz, crg, singularity, mpcdf_viper, pe2, self_hosted_runner, tufts, uw_hyak_pedslabs, binac2, genouest, cbe, unsw_katana, utd_juno, slurm, phoenix, seawulf, uod_hpc, fub_curta, uct_hpc, aws, aws_tower, binac, fsu_draco]
+Jul-20 19:49:45.666 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Jul-20 19:49:45.704 [main] DEBUG nextflow.cli.CmdRun - Launching `/home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/main.nf` [determined_tesla] DSL2 - revision: 0cd9f79ba7
+Jul-20 19:49:45.707 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-20 19:49:45.709 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jul-20 19:49:45.850 [main] DEBUG nextflow.Session - Session UUID: 97a79c30-6b1f-4c72-a56c-79c7927cbef7
+Jul-20 19:49:45.851 [main] DEBUG nextflow.Session - Run name: determined_tesla
+Jul-20 19:49:45.853 [main] DEBUG nextflow.Session - Executor pool size: 12
+Jul-20 19:49:45.869 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jul-20 19:49:45.883 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=36; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-20 19:49:45.902 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 25.04.6 build 5954
   Created: 01-07-2025 11:27 UTC (04:27 PDT)
   System: Linux 6.6.87.2-microsoft-standard-WSL2
-  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 23.0.2-internal-adhoc.conda.src
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 17.0.15-internal+0-adhoc..src
   Encoding: UTF-8 (UTF-8)
-  Process: 5409@Rialaptop [127.0.1.1]
+  Process: 11808@Rialaptop [127.0.1.1]
   CPUs: 12 - Mem: 15.5 GB (13.8 GB) - Swap: 4 GB (4 GB)
-Jul-18 21:10:56.557 [main] DEBUG nextflow.Session - Work-dir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work [v9fs]
-Jul-18 21:10:56.688 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Jul-18 21:10:56.727 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Jul-18 21:10:56.811 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
-Jul-18 21:10:56.885 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Jul-18 21:10:56.912 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 13; maxThreads: 1000
-Jul-18 21:10:57.437 [main] DEBUG nextflow.Session - Session start
-Jul-18 21:10:57.444 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/bactopia_outputs/SRR15144755/bactopia-runs/bactopia-20250718-211054/nf-reports/bactopia-trace.txt
-Jul-18 21:10:57.538 [main] DEBUG nextflow.Session - Using default localLib path: /home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/lib
-Jul-18 21:10:57.571 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/lib
-Jul-18 21:10:57.575 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/lib/nfcore_external_java_deps.jar
-Jul-18 21:10:57.926 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Jul-18 21:11:00.643 [main] INFO  nextflow.script.BaseScript - MODULES: [datasets, gather, qc, assembler, sketcher, amrfinderplus, mlst]
-Jul-18 21:11:00.650 [main] INFO  nextflow.script.BaseScript - MODULES: [datasets, gather, qc, assembler, sketcher, amrfinderplus, mlst]
-Jul-18 21:11:01.057 [main] INFO  nextflow.Nextflow - 
+Jul-20 19:49:45.993 [main] DEBUG nextflow.Session - Work-dir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work [v9fs]
+Jul-20 19:49:46.048 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-20 19:49:46.073 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul-20 19:49:46.131 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jul-20 19:49:46.189 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jul-20 19:49:46.213 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 13; maxThreads: 1000
+Jul-20 19:49:46.459 [main] DEBUG nextflow.Session - Session start
+Jul-20 19:49:46.465 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/my-sample-results/bactopia runs/28_S453_R1_001/bactopia-runs/bactopia-20250720-194944/nf-reports/bactopia-trace.txt
+Jul-20 19:49:46.573 [main] DEBUG nextflow.Session - Using default localLib path: /home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/lib
+Jul-20 19:49:46.737 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/lib
+Jul-20 19:49:46.740 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/lib/nfcore_external_java_deps.jar
+Jul-20 19:49:46.970 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-20 19:49:49.183 [main] INFO  nextflow.script.BaseScript - MODULES: [datasets, gather, qc, assembler, sketcher, amrfinderplus, mlst]
+Jul-20 19:49:49.195 [main] INFO  nextflow.script.BaseScript - MODULES: [datasets, gather, qc, assembler, sketcher, amrfinderplus, mlst]
+Jul-20 19:49:49.558 [main] WARN  nextflow.Nextflow - Found unexpected parameters:
+* --assembler: spades
+Jul-20 19:49:49.562 [main] INFO  nextflow.Nextflow - - [2mIgnore this warning: params.schema_ignore_params = "assembler" [0m
+Jul-20 19:49:49.622 [main] INFO  nextflow.Nextflow - 
 
 -[2m-------------------------------------------[0m-
 [0;34m   _                _              _             [0m
@@ -55,20 +58,20 @@ Jul-18 21:11:01.057 [main] INFO  nextflow.Nextflow -
 [0;36m  Bactopia is a flexible pipeline for complete analysis of bacterial genomes [0m
 -[2m-------------------------------------------[0m-
 [1mCore Nextflow options[0m
-  [0;34mrunName              : [0;32mevil_faraday[0m
+  [0;34mrunName              : [0;32mdetermined_tesla[0m
   [0;34mcontainerEngine      : [0;32mdocker[0m
   [0;34mcontainer            : [0;32mquay.io/bactopia/bactopia:3.1.0[0m
-  [0;34mlaunchDir            : [0;32m/mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8[0m
-  [0;34mworkDir              : [0;32m/mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work[0m
+  [0;34mlaunchDir            : [0;32m/mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11[0m
+  [0;34mworkDir              : [0;32m/mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work[0m
   [0;34mprojectDir           : [0;32m/home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0[0m
   [0;34muserName             : [0;32mriapoluru[0m
   [0;34mprofile              : [0;32mdocker[0m
   [0;34mconfigFiles          : [0;32m/home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/nextflow.config[0m
 
 [1mRequired Parameters[0m
-  [0;34mr1                   : [0;32m/mnt/c/Users/polur/Downloads/fastqs/SRR15144755_1.fastq.gz[0m
-  [0;34mr2                   : [0;32m/mnt/c/Users/polur/Downloads/fastqs/SRR15144755_2.fastq.gz[0m
-  [0;34msample               : [0;32mSRR15144755[0m
+  [0;34mr1                   : [0;32m/mnt/c/Users/polur/Downloads/Illumina_DNA_Reads/Illumina_DNA_Reads/28_S453_R1_001.fastq.gz[0m
+  [0;34mr2                   : [0;32m/mnt/c/Users/polur/Downloads/Illumina_DNA_Reads/Illumina_DNA_Reads/28_S453_R2_001.fastq.gz[0m
+  [0;34msample               : [0;32m28_S453_R1_001[0m
 
 [1mDataset Parameters[0m
   [0;34mgenome_size          : [0;32m0[0m
@@ -81,7 +84,7 @@ Jul-18 21:11:01.057 [main] INFO  nextflow.Nextflow -
   [0;34mproteins             : [0;32m/home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/data/proteins.faa[0m
 
 [1mOptional Parameters[0m
-  [0;34moutdir               : [0;32mbactopia_outputs/SRR15144755[0m
+  [0;34moutdir               : [0;32mmy-sample-results/bactopia runs/28_S453_R1_001[0m
 
 [1mMax Job Request Parameters[0m
   [0;34mmax_memory           : [0;32m14 GB[0m (Original request ([0;32m64 GB[0m) adjusted to fit your system)
@@ -105,80 +108,80 @@ If you use bactopia for your analysis please cite:
 * Software dependencies
   https://bactopia.github.io/acknowledgements/
 -[2m------------------------------------------------------------------[0m-
-Jul-18 21:11:01.326 [main] WARN  nextflow.script.IncludeDef - Include with `addParams()` is deprecated -- pass params as a workflow or process input instead
-Jul-18 21:11:06.221 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:DATASETS
-Jul-18 21:11:06.256 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jul-18 21:11:06.258 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jul-18 21:11:06.276 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Jul-18 21:11:06.290 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=12; memory=15.5 GB; capacity=12; pollInterval=100ms; dumpInterval=5m
-Jul-18 21:11:06.301 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
-Jul-18 21:11:06.390 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:DATASETS': maxForks=0; fair=false; array=0
-Jul-18 21:11:06.645 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:GATHER:GATHER_MODULE
-Jul-18 21:11:06.671 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jul-18 21:11:06.672 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jul-18 21:11:06.678 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:GATHER:GATHER_MODULE': maxForks=3; fair=false; array=0
-Jul-18 21:11:06.812 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:GATHER:CSVTK_CONCAT
-Jul-18 21:11:06.822 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jul-18 21:11:06.823 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jul-18 21:11:06.826 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:GATHER:CSVTK_CONCAT': maxForks=0; fair=false; array=0
-Jul-18 21:11:06.888 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:QC:QC_MODULE
-Jul-18 21:11:06.902 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jul-18 21:11:06.903 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jul-18 21:11:06.907 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:QC:QC_MODULE': maxForks=0; fair=false; array=0
-Jul-18 21:11:06.956 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE
-Jul-18 21:11:06.965 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jul-18 21:11:06.966 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jul-18 21:11:06.969 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE': maxForks=0; fair=false; array=0
-Jul-18 21:11:07.027 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:ASSEMBLER:CSVTK_CONCAT
-Jul-18 21:11:07.034 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jul-18 21:11:07.036 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jul-18 21:11:07.040 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:ASSEMBLER:CSVTK_CONCAT': maxForks=0; fair=false; array=0
-Jul-18 21:11:07.092 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:SKETCHER:SKETCHER_MODULE
-Jul-18 21:11:07.103 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jul-18 21:11:07.105 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jul-18 21:11:07.107 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:SKETCHER:SKETCHER_MODULE': maxForks=0; fair=false; array=0
-Jul-18 21:11:07.166 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:ANNOTATOR:PROKKA_MODULE
-Jul-18 21:11:07.190 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jul-18 21:11:07.197 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jul-18 21:11:07.205 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:ANNOTATOR:PROKKA_MODULE': maxForks=0; fair=false; array=0
-Jul-18 21:11:07.296 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN
-Jul-18 21:11:07.307 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jul-18 21:11:07.308 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jul-18 21:11:07.311 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN': maxForks=0; fair=false; array=0
-Jul-18 21:11:07.315 [main] DEBUG nextflow.processor.TaskProcessor - Creating *combiner* operator for each param(s) at index(es): [1]
-Jul-18 21:11:07.382 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:AMRFINDERPLUS:CSVTK_CONCAT
-Jul-18 21:11:07.390 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jul-18 21:11:07.391 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jul-18 21:11:07.394 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:AMRFINDERPLUS:CSVTK_CONCAT': maxForks=0; fair=false; array=0
-Jul-18 21:11:07.445 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:MLST:MLST_MODULE
-Jul-18 21:11:07.453 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jul-18 21:11:07.455 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jul-18 21:11:07.458 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:MLST:MLST_MODULE': maxForks=0; fair=false; array=0
-Jul-18 21:11:07.498 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:MLST:CSVTK_CONCAT
-Jul-18 21:11:07.502 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jul-18 21:11:07.503 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jul-18 21:11:07.507 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:MLST:CSVTK_CONCAT': maxForks=0; fair=false; array=0
-Jul-18 21:11:07.671 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:DUMPSOFTWAREVERSIONS
-Jul-18 21:11:07.680 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jul-18 21:11:07.681 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jul-18 21:11:07.684 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:DUMPSOFTWAREVERSIONS': maxForks=0; fair=false; array=0
-Jul-18 21:11:07.707 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: BACTOPIA:AMRFINDERPLUS:CSVTK_CONCAT, BACTOPIA:DATASETS, CSVTK_CONCAT, SKETCHER_MODULE, DUMPSOFTWAREVERSIONS, QC, PROKKA, GATHER, BACTOPIA:ASSEMBLER:CSVTK_CONCAT, BACTOPIA:DUMPSOFTWAREVERSIONS, QC_MODULE, BACTOPIA:GATHER:GATHER_MODULE, PROKKA_MODULE, BACTOPIA:MLST:CSVTK_CONCAT, ASSEMBLER, MLST, BACTOPIA:QC:QC_MODULE, BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN, SKETCHER, DATASETS, AMRFINDERPLUS_RUN, ASSEMBLER_MODULE, MLST_MODULE, GATHER_MODULE, BACTOPIA:GATHER:CSVTK_CONCAT, BACTOPIA:MLST:MLST_MODULE, CUSTOM_DUMPSOFTWAREVERSIONS, BACTOPIA:SKETCHER:SKETCHER_MODULE, BACTOPIA:ANNOTATOR:PROKKA_MODULE, BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE
-Jul-18 21:11:07.720 [main] DEBUG nextflow.Session - Igniting dataflow network (27)
-Jul-18 21:11:07.723 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:DATASETS
-Jul-18 21:11:07.725 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:GATHER:GATHER_MODULE
-Jul-18 21:11:07.726 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:GATHER:CSVTK_CONCAT
-Jul-18 21:11:07.728 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:QC:QC_MODULE
-Jul-18 21:11:07.730 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE
-Jul-18 21:11:07.731 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:ASSEMBLER:CSVTK_CONCAT
-Jul-18 21:11:07.733 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:SKETCHER:SKETCHER_MODULE
-Jul-18 21:11:07.734 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:ANNOTATOR:PROKKA_MODULE
-Jul-18 21:11:07.736 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN
-Jul-18 21:11:07.737 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN
-Jul-18 21:11:07.738 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:AMRFINDERPLUS:CSVTK_CONCAT
-Jul-18 21:11:07.739 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:MLST:MLST_MODULE
-Jul-18 21:11:07.741 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:MLST:CSVTK_CONCAT
-Jul-18 21:11:07.742 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:DUMPSOFTWAREVERSIONS
-Jul-18 21:11:07.745 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+Jul-20 19:49:49.919 [main] WARN  nextflow.script.IncludeDef - Include with `addParams()` is deprecated -- pass params as a workflow or process input instead
+Jul-20 19:49:54.000 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:DATASETS
+Jul-20 19:49:54.029 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 19:49:54.031 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 19:49:54.041 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jul-20 19:49:54.050 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=12; memory=15.5 GB; capacity=12; pollInterval=100ms; dumpInterval=5m
+Jul-20 19:49:54.055 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jul-20 19:49:54.109 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:DATASETS': maxForks=0; fair=false; array=0
+Jul-20 19:49:54.263 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:GATHER:GATHER_MODULE
+Jul-20 19:49:54.276 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 19:49:54.277 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 19:49:54.282 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:GATHER:GATHER_MODULE': maxForks=3; fair=false; array=0
+Jul-20 19:49:54.357 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:GATHER:CSVTK_CONCAT
+Jul-20 19:49:54.362 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 19:49:54.363 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 19:49:54.365 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:GATHER:CSVTK_CONCAT': maxForks=0; fair=false; array=0
+Jul-20 19:49:54.399 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:QC:QC_MODULE
+Jul-20 19:49:54.407 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 19:49:54.408 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 19:49:54.411 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:QC:QC_MODULE': maxForks=0; fair=false; array=0
+Jul-20 19:49:54.452 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE
+Jul-20 19:49:54.459 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 19:49:54.464 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 19:49:54.466 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE': maxForks=0; fair=false; array=0
+Jul-20 19:49:54.510 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:ASSEMBLER:CSVTK_CONCAT
+Jul-20 19:49:54.519 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 19:49:54.519 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 19:49:54.521 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:ASSEMBLER:CSVTK_CONCAT': maxForks=0; fair=false; array=0
+Jul-20 19:49:54.563 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:SKETCHER:SKETCHER_MODULE
+Jul-20 19:49:54.569 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 19:49:54.574 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 19:49:54.577 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:SKETCHER:SKETCHER_MODULE': maxForks=0; fair=false; array=0
+Jul-20 19:49:54.641 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:ANNOTATOR:PROKKA_MODULE
+Jul-20 19:49:54.654 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 19:49:54.656 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 19:49:54.661 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:ANNOTATOR:PROKKA_MODULE': maxForks=0; fair=false; array=0
+Jul-20 19:49:54.718 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN
+Jul-20 19:49:54.727 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 19:49:54.728 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 19:49:54.732 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN': maxForks=0; fair=false; array=0
+Jul-20 19:49:54.735 [main] DEBUG nextflow.processor.TaskProcessor - Creating *combiner* operator for each param(s) at index(es): [1]
+Jul-20 19:49:54.795 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:AMRFINDERPLUS:CSVTK_CONCAT
+Jul-20 19:49:54.802 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 19:49:54.803 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 19:49:54.806 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:AMRFINDERPLUS:CSVTK_CONCAT': maxForks=0; fair=false; array=0
+Jul-20 19:49:54.834 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:MLST:MLST_MODULE
+Jul-20 19:49:54.841 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 19:49:54.842 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 19:49:54.844 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:MLST:MLST_MODULE': maxForks=0; fair=false; array=0
+Jul-20 19:49:54.884 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:MLST:CSVTK_CONCAT
+Jul-20 19:49:54.888 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 19:49:54.889 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 19:49:54.891 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:MLST:CSVTK_CONCAT': maxForks=0; fair=false; array=0
+Jul-20 19:49:55.023 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name BACTOPIA:DUMPSOFTWAREVERSIONS
+Jul-20 19:49:55.029 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 19:49:55.037 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 19:49:55.039 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BACTOPIA:DUMPSOFTWAREVERSIONS': maxForks=0; fair=false; array=0
+Jul-20 19:49:55.057 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: BACTOPIA:AMRFINDERPLUS:CSVTK_CONCAT, BACTOPIA:DATASETS, CSVTK_CONCAT, SKETCHER_MODULE, DUMPSOFTWAREVERSIONS, QC, GATHER, PROKKA, BACTOPIA:ASSEMBLER:CSVTK_CONCAT, BACTOPIA:DUMPSOFTWAREVERSIONS, QC_MODULE, BACTOPIA:GATHER:GATHER_MODULE, PROKKA_MODULE, BACTOPIA:MLST:CSVTK_CONCAT, ASSEMBLER, MLST, BACTOPIA:QC:QC_MODULE, BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN, SKETCHER, DATASETS, AMRFINDERPLUS_RUN, ASSEMBLER_MODULE, MLST_MODULE, GATHER_MODULE, BACTOPIA:GATHER:CSVTK_CONCAT, BACTOPIA:MLST:MLST_MODULE, CUSTOM_DUMPSOFTWAREVERSIONS, BACTOPIA:SKETCHER:SKETCHER_MODULE, BACTOPIA:ANNOTATOR:PROKKA_MODULE, BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE
+Jul-20 19:49:55.067 [main] DEBUG nextflow.Session - Igniting dataflow network (27)
+Jul-20 19:49:55.071 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:DATASETS
+Jul-20 19:49:55.074 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:GATHER:GATHER_MODULE
+Jul-20 19:49:55.075 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:GATHER:CSVTK_CONCAT
+Jul-20 19:49:55.081 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:QC:QC_MODULE
+Jul-20 19:49:55.099 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE
+Jul-20 19:49:55.109 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:ASSEMBLER:CSVTK_CONCAT
+Jul-20 19:49:55.111 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:SKETCHER:SKETCHER_MODULE
+Jul-20 19:49:55.116 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:ANNOTATOR:PROKKA_MODULE
+Jul-20 19:49:55.118 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN
+Jul-20 19:49:55.121 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN
+Jul-20 19:49:55.122 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:AMRFINDERPLUS:CSVTK_CONCAT
+Jul-20 19:49:55.123 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:MLST:MLST_MODULE
+Jul-20 19:49:55.124 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:MLST:CSVTK_CONCAT
+Jul-20 19:49:55.125 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BACTOPIA:DUMPSOFTWAREVERSIONS
+Jul-20 19:49:55.128 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
   Script_595ac771c7c13df1: /home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/modules/local/bactopia/gather/main.nf
   Script_b6233c8d549c1895: /home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/workflows/bactopia.nf
   Script_54ad34b1fcb16640: /home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/modules/nf-core/amrfinderplus/run/main.nf
@@ -200,126 +203,115 @@ Jul-18 21:11:07.745 [main] DEBUG nextflow.script.ScriptRunner - Parsed script fi
   Script_ccb755ae94d829f0: /home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/subworkflows/local/gather/main.nf
   Script_c323186e3618d7e7: /home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/subworkflows/local/sketcher/main.nf
   Script_5006a0b829d2df9f: /home/riapoluru/miniforge3/envs/bactopia/share/bactopia-3.1.0/lib/nf/bactopia.nf
-Jul-18 21:11:07.749 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
-Jul-18 21:11:07.750 [main] DEBUG nextflow.Session - Session await
-Jul-18 21:11:07.889 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [skipping] Stored process > BACTOPIA:DATASETS
-Jul-18 21:11:08.499 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jul-18 21:11:08.515 [Task submitter] INFO  nextflow.Session - [e4/d1a404] Submitted process > BACTOPIA:GATHER:GATHER_MODULE (SRR15144755)
-Jul-18 21:13:10.858 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: BACTOPIA:GATHER:GATHER_MODULE (SRR15144755); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/e4/d1a40470cf60dcb10e22dd77c3f7eb]
-Jul-18 21:13:10.862 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=36; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
-Jul-18 21:13:11.406 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:GATHER:GATHER_MODULE > Skipping output binding because one or more optional files are missing: fileoutparam<3>
-Jul-18 21:13:11.407 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:GATHER:GATHER_MODULE > Skipping output binding because one or more optional files are missing: fileoutparam<6>
-Jul-18 21:13:11.442 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=36; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
-Jul-18 21:13:11.592 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jul-18 21:13:11.594 [Task submitter] INFO  nextflow.Session - [9b/690dfe] Submitted process > BACTOPIA:GATHER:CSVTK_CONCAT (meta)
-Jul-18 21:13:13.016 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: BACTOPIA:GATHER:CSVTK_CONCAT (meta); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/9b/690dfe573848d83dac8c2ac0a38fff]
-Jul-18 21:13:13.082 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jul-18 21:13:13.086 [Task submitter] INFO  nextflow.Session - [2b/70c8cd] Submitted process > BACTOPIA:QC:QC_MODULE (SRR15144755)
-Jul-18 21:13:13.177 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:GATHER:CSVTK_CONCAT > Skipping output binding because one or more optional files are missing: fileoutparam<1>
-Jul-18 21:16:06.500 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 3; name: BACTOPIA:QC:QC_MODULE (SRR15144755); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/2b/70c8cd9281862dcd5e3cff3aa5ec2e]
-Jul-18 21:21:06.567 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 3; name: BACTOPIA:QC:QC_MODULE (SRR15144755); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/2b/70c8cd9281862dcd5e3cff3aa5ec2e]
-Jul-18 21:26:06.609 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 3; name: BACTOPIA:QC:QC_MODULE (SRR15144755); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/2b/70c8cd9281862dcd5e3cff3aa5ec2e]
-Jul-18 21:31:06.690 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 3; name: BACTOPIA:QC:QC_MODULE (SRR15144755); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/2b/70c8cd9281862dcd5e3cff3aa5ec2e]
-Jul-18 21:33:18.308 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: BACTOPIA:QC:QC_MODULE (SRR15144755); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/2b/70c8cd9281862dcd5e3cff3aa5ec2e]
-Jul-18 21:33:19.177 [TaskFinalizer-3] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:QC:QC_MODULE > Skipping output binding because one or more optional files are missing: fileoutparam<6>
-Jul-18 21:33:19.475 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jul-18 21:33:19.478 [Task submitter] INFO  nextflow.Session - [fa/825ee5] Submitted process > BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE (SRR15144755)
-Jul-18 21:36:06.776 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 5; name: BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE (SRR15144755); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/fa/825ee583ee6c5702a468787b4aeaf2]
-Jul-18 21:41:06.813 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 5; name: BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE (SRR15144755); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/fa/825ee583ee6c5702a468787b4aeaf2]
-Jul-18 21:46:06.898 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 5; name: BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE (SRR15144755); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/fa/825ee583ee6c5702a468787b4aeaf2]
-Jul-18 21:51:06.907 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 5; name: BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE (SRR15144755); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/fa/825ee583ee6c5702a468787b4aeaf2]
-Jul-18 21:56:07.004 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 5; name: BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE (SRR15144755); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/fa/825ee583ee6c5702a468787b4aeaf2]
-Jul-18 21:59:59.892 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE (SRR15144755); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/fa/825ee583ee6c5702a468787b4aeaf2]
-Jul-18 22:00:00.212 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process `BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE (SRR15144755)` is unable to find [UnixPath]: `/mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/fa/825ee583ee6c5702a468787b4aeaf2/SRR15144755-assembly-error.txt` (pattern: `SRR15144755-assembly-error.txt`)
-Jul-18 22:00:00.307 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE > Skipping output binding because one or more optional files are missing: fileoutparam<4>
-Jul-18 22:00:00.464 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jul-18 22:00:00.466 [Task submitter] INFO  nextflow.Session - [d7/fe743e] Submitted process > BACTOPIA:MLST:MLST_MODULE (SRR15144755)
-Jul-18 22:00:00.471 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 3 -- tasks to be submitted are shown below
-~> TaskHandler[id: 9; name: BACTOPIA:ASSEMBLER:CSVTK_CONCAT (assembly-scan); status: NEW; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/0b/52a54dbe232bfeb855ced16cfa6f5a]
-~> TaskHandler[id: 8; name: BACTOPIA:SKETCHER:SKETCHER_MODULE (SRR15144755); status: NEW; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/0a/6ea8d99096c032c3a3f0076e717b98]
-~> TaskHandler[id: 7; name: BACTOPIA:ANNOTATOR:PROKKA_MODULE (SRR15144755); status: NEW; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/c2/50cf1c7f307ff3f16aeffe5117f222]
-Jul-18 22:01:07.035 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 6; name: BACTOPIA:MLST:MLST_MODULE (SRR15144755); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/d7/fe743ef375cc8febf9d2445817af4c]
-Jul-18 22:01:39.941 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: BACTOPIA:MLST:MLST_MODULE (SRR15144755); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/d7/fe743ef375cc8febf9d2445817af4c]
-Jul-18 22:01:39.990 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jul-18 22:01:39.993 [Task submitter] INFO  nextflow.Session - [0b/52a54d] Submitted process > BACTOPIA:ASSEMBLER:CSVTK_CONCAT (assembly-scan)
-Jul-18 22:01:40.122 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:MLST:MLST_MODULE > Skipping output binding because one or more optional files are missing: fileoutparam<1>
-Jul-18 22:01:41.311 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: BACTOPIA:ASSEMBLER:CSVTK_CONCAT (assembly-scan); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/0b/52a54dbe232bfeb855ced16cfa6f5a]
-Jul-18 22:01:41.360 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jul-18 22:01:41.364 [Task submitter] INFO  nextflow.Session - [0a/6ea8d9] Submitted process > BACTOPIA:SKETCHER:SKETCHER_MODULE (SRR15144755)
-Jul-18 22:01:41.449 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:ASSEMBLER:CSVTK_CONCAT > Skipping output binding because one or more optional files are missing: fileoutparam<1>
-Jul-18 22:05:00.777 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 2 -- tasks to be submitted are shown below
-~> TaskHandler[id: 7; name: BACTOPIA:ANNOTATOR:PROKKA_MODULE (SRR15144755); status: NEW; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/c2/50cf1c7f307ff3f16aeffe5117f222]
-~> TaskHandler[id: 10; name: BACTOPIA:MLST:CSVTK_CONCAT (mlst); status: NEW; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/56/a3ad40f11f09c03948a9f3131e14d3]
-Jul-18 22:06:07.105 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 8; name: BACTOPIA:SKETCHER:SKETCHER_MODULE (SRR15144755); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/0a/6ea8d99096c032c3a3f0076e717b98]
-Jul-18 22:06:35.641 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: BACTOPIA:SKETCHER:SKETCHER_MODULE (SRR15144755); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/0a/6ea8d99096c032c3a3f0076e717b98]
-Jul-18 22:06:35.973 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jul-18 22:06:35.986 [Task submitter] INFO  nextflow.Session - [c2/50cf1c] Submitted process > BACTOPIA:ANNOTATOR:PROKKA_MODULE (SRR15144755)
-Jul-18 22:06:37.166 [TaskFinalizer-7] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:SKETCHER:SKETCHER_MODULE > Skipping output binding because one or more optional files are missing: fileoutparam<4>
-Jul-18 22:10:01.713 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
-~> TaskHandler[id: 10; name: BACTOPIA:MLST:CSVTK_CONCAT (mlst); status: NEW; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/56/a3ad40f11f09c03948a9f3131e14d3]
-Jul-18 22:11:07.113 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 7; name: BACTOPIA:ANNOTATOR:PROKKA_MODULE (SRR15144755); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/c2/50cf1c7f307ff3f16aeffe5117f222]
-Jul-18 22:13:52.887 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: BACTOPIA:ANNOTATOR:PROKKA_MODULE (SRR15144755); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/c2/50cf1c7f307ff3f16aeffe5117f222]
-Jul-18 22:13:53.113 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jul-18 22:13:53.116 [Task submitter] INFO  nextflow.Session - [56/a3ad40] Submitted process > BACTOPIA:MLST:CSVTK_CONCAT (mlst)
-Jul-18 22:13:57.062 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: BACTOPIA:MLST:CSVTK_CONCAT (mlst); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/56/a3ad40f11f09c03948a9f3131e14d3]
-Jul-18 22:13:57.399 [TaskFinalizer-9] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:MLST:CSVTK_CONCAT > Skipping output binding because one or more optional files are missing: fileoutparam<1>
-Jul-18 22:14:08.896 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jul-18 22:14:08.943 [Task submitter] INFO  nextflow.Session - [a6/8dbf8f] Submitted process > BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN (SRR15144755)
-Jul-18 22:16:07.118 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 11; name: BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN (SRR15144755); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/a6/8dbf8f82fd94cd41576b00837d1acd]
-Jul-18 22:19:08.025 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN (SRR15144755); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/a6/8dbf8f82fd94cd41576b00837d1acd]
-Jul-18 22:19:08.080 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process `BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN (SRR15144755)` is unable to find [UnixPath]: `/mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/a6/8dbf8f82fd94cd41576b00837d1acd/SRR15144755-mutations.tsv` (pattern: `SRR15144755-mutations.tsv`)
-Jul-18 22:19:08.523 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
-Jul-18 22:19:08.524 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN > Skipping output binding because one or more optional files are missing: fileoutparam<2>
-Jul-18 22:19:09.111 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jul-18 22:19:09.161 [Task submitter] INFO  nextflow.Session - [3d/06aa93] Submitted process > BACTOPIA:AMRFINDERPLUS:CSVTK_CONCAT (amrfinderplus)
-Jul-18 22:19:09.591 [Actor Thread 5] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 7; slices: 1; internal sort time: 1.028 s; external sort time: 0.006 s; total time: 1.034 s
-Jul-18 22:19:11.262 [Actor Thread 5] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/collect-file/f00b4038c80d0125755516bea8b716a5
-Jul-18 22:19:11.304 [Actor Thread 5] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-12723396916563342085
-Jul-18 22:19:12.483 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
-~> TaskHandler[id: 13; name: BACTOPIA:DUMPSOFTWAREVERSIONS (1); status: NEW; exit: -; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/1c/984db9422b27ebc00f6c1ad6941bd9]
-Jul-18 22:19:14.553 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: BACTOPIA:AMRFINDERPLUS:CSVTK_CONCAT (amrfinderplus); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/3d/06aa930c5fd34379e25d4797804866]
-Jul-18 22:19:14.730 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jul-18 22:19:14.740 [Task submitter] INFO  nextflow.Session - [1c/984db9] Submitted process > BACTOPIA:DUMPSOFTWAREVERSIONS (1)
-Jul-18 22:19:15.407 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:AMRFINDERPLUS:CSVTK_CONCAT > Skipping output binding because one or more optional files are missing: fileoutparam<1>
-Jul-18 22:19:27.710 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: BACTOPIA:DUMPSOFTWAREVERSIONS (1); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/1c/984db9422b27ebc00f6c1ad6941bd9]
-Jul-18 22:19:28.165 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:DUMPSOFTWAREVERSIONS > Skipping output binding because one or more optional files are missing: fileoutparam<2>
-Jul-18 22:19:28.196 [main] DEBUG nextflow.Session - Session await > all processes finished
-Jul-18 22:19:28.312 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
-Jul-18 22:19:28.334 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Jul-18 22:19:28.386 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
-Jul-18 22:19:29.285 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
-Jul-18 22:19:29.302 [main] INFO  nextflow.script.BaseScript - 
+Jul-20 19:49:55.129 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jul-20 19:49:55.131 [main] DEBUG nextflow.Session - Session await
+Jul-20 19:49:55.204 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [skipping] Stored process > BACTOPIA:DATASETS
+Jul-20 19:49:55.591 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 19:49:55.597 [Task submitter] INFO  nextflow.Session - [e3/b45b12] Submitted process > BACTOPIA:GATHER:GATHER_MODULE (28_S453_R1_001)
+Jul-20 19:50:57.153 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: BACTOPIA:GATHER:GATHER_MODULE (28_S453_R1_001); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/e3/b45b12b7816f3830b70ac69f8470a1]
+Jul-20 19:50:57.176 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=36; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-20 19:50:57.787 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:GATHER:GATHER_MODULE > Skipping output binding because one or more optional files are missing: fileoutparam<3>
+Jul-20 19:50:57.788 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:GATHER:GATHER_MODULE > Skipping output binding because one or more optional files are missing: fileoutparam<6>
+Jul-20 19:50:57.848 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=36; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-20 19:50:58.069 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 19:50:58.071 [Task submitter] INFO  nextflow.Session - [ac/6a9cad] Submitted process > BACTOPIA:GATHER:CSVTK_CONCAT (meta)
+Jul-20 19:50:59.224 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: BACTOPIA:GATHER:CSVTK_CONCAT (meta); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/ac/6a9cad550a86626464be0e92842b93]
+Jul-20 19:50:59.342 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 19:50:59.350 [Task submitter] INFO  nextflow.Session - [e9/bcb496] Submitted process > BACTOPIA:QC:QC_MODULE (28_S453_R1_001)
+Jul-20 19:50:59.498 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:GATHER:CSVTK_CONCAT > Skipping output binding because one or more optional files are missing: fileoutparam<1>
+Jul-20 19:54:54.187 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: BACTOPIA:QC:QC_MODULE (28_S453_R1_001); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/e9/bcb4963eaf7359507c2f3304f517eb]
+Jul-20 19:59:22.776 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: BACTOPIA:QC:QC_MODULE (28_S453_R1_001); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/e9/bcb4963eaf7359507c2f3304f517eb]
+Jul-20 19:59:23.647 [TaskFinalizer-3] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:QC:QC_MODULE > Skipping output binding because one or more optional files are missing: fileoutparam<6>
+Jul-20 19:59:23.993 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 19:59:23.996 [Task submitter] INFO  nextflow.Session - [a9/5eb555] Submitted process > BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE (28_S453_R1_001)
+Jul-20 19:59:54.256 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE (28_S453_R1_001); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/a9/5eb555e93d04eede737b6cd7892baf]
+Jul-20 20:04:54.267 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE (28_S453_R1_001); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/a9/5eb555e93d04eede737b6cd7892baf]
+Jul-20 20:09:54.309 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE (28_S453_R1_001); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/a9/5eb555e93d04eede737b6cd7892baf]
+Jul-20 20:14:54.411 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE (28_S453_R1_001); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/a9/5eb555e93d04eede737b6cd7892baf]
+Jul-20 20:19:54.451 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE (28_S453_R1_001); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/a9/5eb555e93d04eede737b6cd7892baf]
+Jul-20 20:21:19.391 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE (28_S453_R1_001); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/a9/5eb555e93d04eede737b6cd7892baf]
+Jul-20 20:21:20.514 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process `BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE (28_S453_R1_001)` is unable to find [UnixPath]: `/mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/a9/5eb555e93d04eede737b6cd7892baf/28_S453_R1_001-assembly-error.txt` (pattern: `28_S453_R1_001-assembly-error.txt`)
+Jul-20 20:21:20.580 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:ASSEMBLER:ASSEMBLER_MODULE > Skipping output binding because one or more optional files are missing: fileoutparam<4>
+Jul-20 20:21:20.787 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 20:21:20.791 [Task submitter] INFO  nextflow.Session - [45/b0573c] Submitted process > BACTOPIA:SKETCHER:SKETCHER_MODULE (28_S453_R1_001)
+Jul-20 20:21:20.796 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 3 -- tasks to be submitted are shown below
+~> TaskHandler[id: 8; name: BACTOPIA:MLST:MLST_MODULE (28_S453_R1_001); status: NEW; exit: -; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/db/8b9c63040f445b25f3a2400e9f61b6]
+~> TaskHandler[id: 7; name: BACTOPIA:ANNOTATOR:PROKKA_MODULE (28_S453_R1_001); status: NEW; exit: -; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/19/c24fa8b8685a759d5a904445781c25]
+~> TaskHandler[id: 9; name: BACTOPIA:ASSEMBLER:CSVTK_CONCAT (assembly-scan); status: NEW; exit: -; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/6f/c82695f03ce3dcc71ca8ae69867c54]
+Jul-20 20:24:54.455 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: BACTOPIA:SKETCHER:SKETCHER_MODULE (28_S453_R1_001); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/45/b0573c5dcbe0320b04afeee2533be8]
+Jul-20 20:25:45.747 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: BACTOPIA:SKETCHER:SKETCHER_MODULE (28_S453_R1_001); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/45/b0573c5dcbe0320b04afeee2533be8]
+Jul-20 20:25:45.789 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 20:25:45.792 [Task submitter] INFO  nextflow.Session - [db/8b9c63] Submitted process > BACTOPIA:MLST:MLST_MODULE (28_S453_R1_001)
+Jul-20 20:25:45.911 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:SKETCHER:SKETCHER_MODULE > Skipping output binding because one or more optional files are missing: fileoutparam<4>
+Jul-20 20:26:21.462 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 2 -- tasks to be submitted are shown below
+~> TaskHandler[id: 7; name: BACTOPIA:ANNOTATOR:PROKKA_MODULE (28_S453_R1_001); status: NEW; exit: -; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/19/c24fa8b8685a759d5a904445781c25]
+~> TaskHandler[id: 9; name: BACTOPIA:ASSEMBLER:CSVTK_CONCAT (assembly-scan); status: NEW; exit: -; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/6f/c82695f03ce3dcc71ca8ae69867c54]
+Jul-20 20:28:05.541 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: BACTOPIA:MLST:MLST_MODULE (28_S453_R1_001); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/db/8b9c63040f445b25f3a2400e9f61b6]
+Jul-20 20:28:05.878 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 20:28:05.891 [Task submitter] INFO  nextflow.Session - [19/c24fa8] Submitted process > BACTOPIA:ANNOTATOR:PROKKA_MODULE (28_S453_R1_001)
+Jul-20 20:28:06.144 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:MLST:MLST_MODULE > Skipping output binding because one or more optional files are missing: fileoutparam<1>
+Jul-20 20:29:54.480 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 7; name: BACTOPIA:ANNOTATOR:PROKKA_MODULE (28_S453_R1_001); status: RUNNING; exit: -; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/19/c24fa8b8685a759d5a904445781c25]
+Jul-20 20:31:22.278 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 2 -- tasks to be submitted are shown below
+~> TaskHandler[id: 9; name: BACTOPIA:ASSEMBLER:CSVTK_CONCAT (assembly-scan); status: NEW; exit: -; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/6f/c82695f03ce3dcc71ca8ae69867c54]
+~> TaskHandler[id: 10; name: BACTOPIA:MLST:CSVTK_CONCAT (mlst); status: NEW; exit: -; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/78/b273ff6d0d44148550c8298c12f039]
+Jul-20 20:33:18.883 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: BACTOPIA:ANNOTATOR:PROKKA_MODULE (28_S453_R1_001); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/19/c24fa8b8685a759d5a904445781c25]
+Jul-20 20:33:18.932 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 20:33:18.934 [Task submitter] INFO  nextflow.Session - [6f/c82695] Submitted process > BACTOPIA:ASSEMBLER:CSVTK_CONCAT (assembly-scan)
+Jul-20 20:33:19.914 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: BACTOPIA:ASSEMBLER:CSVTK_CONCAT (assembly-scan); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/6f/c82695f03ce3dcc71ca8ae69867c54]
+Jul-20 20:33:19.958 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 20:33:19.960 [Task submitter] INFO  nextflow.Session - [78/b273ff] Submitted process > BACTOPIA:MLST:CSVTK_CONCAT (mlst)
+Jul-20 20:33:20.014 [TaskFinalizer-8] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:ASSEMBLER:CSVTK_CONCAT > Skipping output binding because one or more optional files are missing: fileoutparam<1>
+Jul-20 20:33:21.130 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: BACTOPIA:MLST:CSVTK_CONCAT (mlst); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/78/b273ff6d0d44148550c8298c12f039]
+Jul-20 20:33:21.225 [TaskFinalizer-9] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:MLST:CSVTK_CONCAT > Skipping output binding because one or more optional files are missing: fileoutparam<1>
+Jul-20 20:33:21.417 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 20:33:21.427 [Task submitter] INFO  nextflow.Session - [41/f00816] Submitted process > BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN (28_S453_R1_001)
+Jul-20 20:34:28.538 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN (28_S453_R1_001); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/41/f00816466ed1883edcc8fe073af894]
+Jul-20 20:34:28.545 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process `BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN (28_S453_R1_001)` is unable to find [UnixPath]: `/mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/41/f00816466ed1883edcc8fe073af894/28_S453_R1_001-mutations.tsv` (pattern: `28_S453_R1_001-mutations.tsv`)
+Jul-20 20:34:28.613 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Jul-20 20:34:28.613 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:AMRFINDERPLUS:AMRFINDERPLUS_RUN > Skipping output binding because one or more optional files are missing: fileoutparam<2>
+Jul-20 20:34:29.631 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 20:34:29.634 [Task submitter] INFO  nextflow.Session - [1c/007c69] Submitted process > BACTOPIA:AMRFINDERPLUS:CSVTK_CONCAT (amrfinderplus)
+Jul-20 20:34:30.345 [Actor Thread 6] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 7; slices: 1; internal sort time: 1.703 s; external sort time: 0.018 s; total time: 1.721 s
+Jul-20 20:34:31.829 [Actor Thread 6] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/collect-file/23f6f509552e5708c289bd1162d25af2
+Jul-20 20:34:31.847 [Actor Thread 6] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-16256005815831056090
+Jul-20 20:34:32.658 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: BACTOPIA:AMRFINDERPLUS:CSVTK_CONCAT (amrfinderplus); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/1c/007c6921b1c35e459f705235a66607]
+Jul-20 20:34:32.717 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 20:34:32.719 [Task submitter] INFO  nextflow.Session - [13/8dc207] Submitted process > BACTOPIA:DUMPSOFTWAREVERSIONS (1)
+Jul-20 20:34:32.799 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:AMRFINDERPLUS:CSVTK_CONCAT > Skipping output binding because one or more optional files are missing: fileoutparam<1>
+Jul-20 20:34:34.455 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: BACTOPIA:DUMPSOFTWAREVERSIONS (1); status: COMPLETED; exit: 0; error: -; workDir: /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/13/8dc20762a8cc811d8bdbd3340a07bb]
+Jul-20 20:34:34.602 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Process BACTOPIA:DUMPSOFTWAREVERSIONS > Skipping output binding because one or more optional files are missing: fileoutparam<2>
+Jul-20 20:34:34.621 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jul-20 20:34:34.655 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jul-20 20:34:34.658 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jul-20 20:34:34.668 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Jul-20 20:34:34.735 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Jul-20 20:34:34.741 [main] INFO  nextflow.script.BaseScript - 
     Bactopia Execution Summary
     ---------------------------
     Bactopia Version : 3.1.0
     Nextflow Version : 25.04.6
-    Command Line     : nextflow run /home/riapoluru/miniforge3/envs/bactopia//share/bactopia-3.1.0/main.nf -w /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8/work/ --r1 /mnt/c/Users/polur/Downloads/fastqs/SRR15144755_1.fastq.gz --r2 /mnt/c/Users/polur/Downloads/fastqs/SRR15144755_2.fastq.gz --sample SRR15144755 --outdir bactopia_outputs/SRR15144755 -profile docker
+    Command Line     : nextflow run /home/riapoluru/miniforge3/envs/bactopia//share/bactopia-3.1.0/main.nf -w /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11/work/ --r1 /mnt/c/Users/polur/Downloads/Illumina_DNA_Reads/Illumina_DNA_Reads/28_S453_R1_001.fastq.gz --r2 /mnt/c/Users/polur/Downloads/Illumina_DNA_Reads/Illumina_DNA_Reads/28_S453_R2_001.fastq.gz --sample 28_S453_R1_001 --assembler spades --outdir 'my-sample-results/bactopia runs/28_S453_R1_001' -profile docker
     Resumed          : false
-    Completed At     : 2025-07-18T22:19:29.290793257-07:00
-    Duration         : 1h 8m 32s
+    Completed At     : 2025-07-20T20:34:34.736815769-07:00
+    Duration         : 44m 49s
     Success          : true
     Exit Code        : 0
     Error Report     : -
-    Launch Dir       : /mnt/c/Users/polur/OneDrive/Documents/Bactopia/ARG-Dataset---Bactopia-8
+    Launch Dir       : /mnt/c/Users/polur/Documents/Bactopia/ARG-Dataset---Bactopia-11
     
-Jul-18 22:19:29.347 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=12; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=4h 29m 43s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=8; peakMemory=16 GB; ]
-Jul-18 22:19:29.379 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
-Jul-18 22:19:29.541 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
-Jul-18 22:19:31.255 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
-Jul-18 22:19:32.756 [main] WARN  nextflow.dag.GraphvizRenderer - Graphviz is required to render the execution DAG in the given format -- See http://www.graphviz.org for more info.
-Jul-18 22:19:32.976 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
-Jul-18 22:19:33.198 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
-Jul-18 22:19:33.200 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+Jul-20 20:34:34.758 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=12; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=2h 56m 55s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=3; peakCpus=12; peakMemory=24 GB; ]
+Jul-20 20:34:34.759 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Jul-20 20:34:34.783 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Jul-20 20:34:35.708 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Jul-20 20:34:37.327 [main] WARN  nextflow.dag.GraphvizRenderer - Graphviz is required to render the execution DAG in the given format -- See http://www.graphviz.org for more info.
+Jul-20 20:34:37.703 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jul-20 20:34:37.892 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Jul-20 20:34:37.895 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
